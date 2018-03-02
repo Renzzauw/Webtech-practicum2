@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(20, 20, 20);
+    background-image: url("media/wood.jpg");
+}
+
+body nav {
+    background-color: rgba(20, 20, 20, 0.6);
+    line-height: 70px;
+}
+
+body nav a {
+    padding: 25px;
+    color: rgb(255, 255, 255); 
+    text-decoration: none;
+}
+
+body nav a:hover {
+    color: rgb(140, 140, 243);
+    background-color: rgb(50, 50, 50);
+}
+
+body nav a b {
+    text-transform: uppercase;
+}
+
+h1 {
+    color: rgb(90, 66, 0);
+}
+
+p {
+    color: rgb(39, 39, 39);
+    font-size: 110%;
+}
+
+table, th, td {
+    width: 40%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(even) {
+    background-color: rgb(220, 220, 220);
+}
+
+table tr:nth-child(odd) {
+    background-color: rgb(204, 204, 204);
+}
+
+th {
+    color: white;
+    background-color: black;
+    text-align: left;
+}
+
+th, td {
+    padding: 10px;
+}
+
+#home-image1 {
+    margin: 50px;
+    width: 320px;
+    height: 240px;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+#home-woods img {
+    width: 20%;
+    height: 20%;
+}
+
+#home-woods p {
+    font-size: 150%;
+}
+
+#wikilink1 {
+    color: red;
+}
+
+#wikilink1:hover {
+    color: green;
+}
+
+footer {
+    background-color: #222222;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+#footer-text {
+    color: inherit;
+}
+
+ol li {
+    color: rgb(39, 39, 39);
+    font-size: 110%;
+    margin: 10px;
+}
+
+#team-table tr td img {
+    height: 100px;
+    width: 100px;
+}
