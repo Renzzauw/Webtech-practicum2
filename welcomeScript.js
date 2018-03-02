@@ -1,2 +1,5 @@
-var welcomeText = document.getElementsByTagName("h2");
-welcomeTex
+function triggerWelcome() {
+    alert("Page is loaded");
+    document.getElementById("welcomeText").innerHTML = "Welcome to our website!";
+}
+
