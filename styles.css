@@ -102,3 +102,8 @@ ol li {
     height: 100px;
     width: 100px;
 }
+
+#placeholder {
+    width: 500px;
+    height: 500px;
+}
