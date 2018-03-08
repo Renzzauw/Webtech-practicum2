@@ -9,6 +9,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="styles.css"/>
         <script src="libraries/jquery.js"></script>
+        <script src="libraries/jquery-ui.js"></script> 
     </head>
     <!-- body -->
     <body>
@@ -45,11 +46,13 @@
                     if you need some advice or have any questions!
                 </p>
             </section>
-            <section>
-                <h3 id="home-video">A brief history of wood</h3>
-                <p id="click-text-home">
-                    Click <b>here</b> to load video.
-                </p>
+            <section onclick="alert('Clicked')">
+                <button id="but" onclick="alert('You')">
+                    Click me! <br>
+                </button>    
+            </section>
+            <section id="vid-section">
+                <h3 id="home-video">A brief history of wood</h3>           
                 <video id="video" width="800" controls>
                     <source src="media/woodvid.mp4" type="video/mp4">
                     Your browser does not support HTML5 video.
@@ -74,6 +77,6 @@
         </footer> 
     <!-- scripts -->
     <script src="scripts/welcomeScript.js"></script> 
-    <script src="scripts/displayVideo.js" ></script>   
+    <script src="scripts/toggleVideo.js"></script>  
     </body>
 </html>
