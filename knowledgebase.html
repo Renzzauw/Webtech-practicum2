@@ -9,6 +9,30 @@
         <link rel="stylesheet" href="styles.css"/>
         <script src="libraries/jquery.js"></script>
         <script src="libraries/jquery-ui.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('contextmenu', function(e) {
+                var menu = [{
+                    name: 'create',
+                    title: 'create button',
+                    fun: function () {
+                        alert('i am add button')
+                    }
+                }, {
+                    name: 'update',
+                    title: 'update button',
+                    fun: function () {
+                        alert('i am update button')
+                    }
+                }, {
+                    name: 'delete',
+                    title: 'delete button',
+                    fun: function () {
+                        alert('i am delete button')
+                    }
+                }];
+                e.preventDefault();
+            }, false);
+        </script>
     </head>
     <!-- body -->
     <body>
@@ -29,7 +53,35 @@
         </header>   
         <!-- main content page -->       
         <main>
+            <script>
+            var menu = [{
+                name: 'create',
+                title: 'create button',
+                fun: function () {
+                    alert('i am add button')
+                }
+            }, {
+                name: 'update',
+                title: 'update button',
+                fun: function () {
+                    alert('i am update button')
+                }
+            }, {
+                name: 'delete',
+                title: 'delete button',
+                fun: function () {
+                    alert('i am delete button')
+                }
+            }];
+         
+             //Calling context menu
+            $('.testButton').contextMenu(menu);
+            </script>
+            <button onclick="myFunction">"hi"</button>
             
+
+            <div class="testButton iw-mTrigger" id="testButton1">Click me</div>
+            <p>help</p>
         </main>
         <!-- footer -->
         <footer>
