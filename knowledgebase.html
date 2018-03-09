@@ -9,8 +9,13 @@
         <link rel="stylesheet" href="styles.css"/>
         <script src="libraries/jquery.js"></script>
         <script src="libraries/jquery-ui.js"></script>
-        <script type="text/javascript" src="newcontextmenu.js"></script>
-        
+        <style>
+            div {
+                background: yellow;
+                border: 1px solid black;
+                padding: 10px;
+            }
+        </style>
     </head>
     <!-- body -->
     <body>
@@ -31,7 +36,8 @@
         </header>   
         <!-- main content page -->       
         <main>
-            
+        <div oncontextmenu="hey()"></div>
+        <script type="text/javascript" src="newcontextmenu.js"></script>
         </main>
         <!-- footer -->
         <footer>
