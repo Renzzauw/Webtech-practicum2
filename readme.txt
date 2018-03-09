@@ -12,9 +12,7 @@ Tasks / Features:
     first and then the section message. The alerts should display "You" > "Clicked".
 -   JQUERY:
     All javascript files make use of jQuery and its syntax using the $-sign.
--   JQUERY UI + APPEARANCE CHANGE: 
-    on the index page we make use of a checkbox from the jQuery UI library. With this checkbox you can toggle
-    the video on and off.
+
     
     
     
