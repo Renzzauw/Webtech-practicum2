@@ -1,23 +1,27 @@
-class Article {
-    constructor(title, text) {
-        this.name = "ARTICLE!";
+class SingleParagraphArticle 
+{
+    constructor(title, text) 
+    {
         this.title = title;
         this.text = text;
+        //let head = title;
+        //let bod = text;
+        //this.name = "ARTICLE!";
     }
     // function to turn this article instance into HTML
-    turnIntoHTML(){
-        document.write("<article>");
-        document.write("<h2>"+title+"</h2>");
-        document.write("<p>"+text+"</p>");
-        document.write("</article>");
-        window.alert(this.name + " created!");
+    turnIntoHTML()
+    {
+        $( "main" ).append("<article><h2>"+this.title+"</h2><p>"+this.text+"</p></article>");
     }
 }
 
-
-article1 = new Article("TITEL", "hallo dit is tekst.");
+article1 = new SingleParagraphArticle("Article1", "This is absolutely not a test.");
 article1.turnIntoHTML();
+article2 = new SingleParagraphArticle("Article2", "This is absolutely not a test too.");
+article2.turnIntoHTML();
 
+/*
 class DoubleParagraphArticle extends Article {
 
 }
+*/
