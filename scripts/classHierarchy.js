@@ -1,3 +1,7 @@
+// global variables 
+//articlelist;
+articlecounter = 0;
+
 // create an empty nav menu to fill after filling the page with articles
 $( "main" ).append('<nav id="nav-menu-kb"></nav>');
 
@@ -6,11 +10,13 @@ class SingleParagraphArticle {
     constructor(title, text) {
         this.title = title;
         this.text = text;
+        //articlelist.push(this.title);    
+        articlecounter++;
     }
     // function to turn this article instance into HTML
     turnIntoHTML() {
-        $( "main" ).append('<article id="art-'+this.title+'"><h2>'+this.title+'</h2><p>'+this.text+'</p></article>');
-        $( "#nav-menu-kb" ).append('<a href="#art-'+this.title+'">'+this.title+'</a>');
+        $( "main" ).append('<article class="kb-articles" id="art-'+articlecounter+'"><h2>'+this.title+'</h2><p>'+this.text+'</p><p><a href="#art-'+(articlecounter+1)+'">Next Article</a></p></article>');
+        $( "#nav-menu-kb" ).append('<a href="#art-'+articlecounter+'">'+this.title+'</a>');        
     }
 }
 
@@ -37,6 +43,7 @@ function createArticle (articleKind, title, content){
 // creation of various articles
 createArticle(SingleParagraphArticle, "Article1", ["This is absolutely not a test."]);
 createArticle(SingleParagraphArticle, "Article2", ["This is absolutely not a test too."]);
+
 //createArticle(DoubleParagraphArticle, "Article2", ["This is a nice article.", "Did I mention this one has 2 paragraphs?"]);
 
 
