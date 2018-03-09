@@ -109,17 +109,21 @@ ol li {
 }
 
 .kb-articles {
-    color: white;
+    width: 80%;
     background-color: rgba(20, 20, 20, 0.5);
-    width: 500px;
     margin: 10px;
     padding: 50px;
 }
 
 .kb-articles h2 {
-    color: inherit;
+    color: rgb(190, 166, 10);
 }
 
 .kb-articles p {
-    color: inherit;
+    color: white;
+    font-size: 120%;
+}
+
+.kb-articles a {
+    font-size: 80%;
 }

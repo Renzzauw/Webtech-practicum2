@@ -27,8 +27,9 @@ class DoubleParagraphArticle extends SingleParagraphArticle {
     }
     // function to turn this article instance into HTML
     turnIntoHTML() {
-        //$( "main" ).append("<article><h2>"+this.title+"</h2><p>"+this.text+"</p><p>"+this.text2+"</p></article>");
-        
+        $( "main" ).append('<article class="kb-articles" id="art-'+articlecounter+'"><h2>'+this.title+'</h2><p>'+this.text+'</p><p>'+this.text2+'</p><p><a href="#art-'+(articlecounter+1)+'">Next Article</a></p></article>');
+        // add this article to the nav menu on top
+        $( "#nav-menu-kb" ).append('<a href="#art-'+articlecounter+'">'+this.title+'</a>'); 
     }
 }
 
@@ -37,6 +38,7 @@ function createArticle (articleKind, title, content){
     article = new articleKind(title, content[0], content[1]);
     article.turnIntoHTML();
 }
+
 // creation of various articles
 createArticle(SingleParagraphArticle, "Kinds Of Wood", ["Hello! We sell many kinds of wood, read further for various kinds of wood."]);
 createArticle(SingleParagraphArticle, "Acacia", ["This is a very nice tree."]);
