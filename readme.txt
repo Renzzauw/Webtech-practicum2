@@ -12,7 +12,10 @@ Tasks / Features:
     first and then the section message. The alerts should display "You" > "Clicked".
 -   JQUERY:
     All javascript files make use of jQuery and its syntax using the $-sign.
-
+-   CLASSES, INHERITANCE & KNOWLEDGE BASE:
+    We made an article generating class. This class takes a title and content in its constructor and creates HTML with this info.
+    It also makes sure to link it with an <a>-tag to next articles and adds the article to a nav menu on top. We made a second class
+    that inherits from this one, but it adds an extra feature: an extra paragraph of content.
     
     
     
@@ -21,6 +24,3 @@ Tasks / Features:
     
     TODO:
 -   The plot page has a plotted  line that has been made with he Flot library. TODO: interactive maken.
--   We have a "knowledge base" page... TODO: hem maken lol
--   classes en inheritance
--   
