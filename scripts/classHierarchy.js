@@ -19,12 +19,10 @@ class SingleParagraphArticle {
     }
 }
 
-/*
 // class that extends the previous class with an extra paragraph
 class DoubleParagraphArticle extends SingleParagraphArticle {
     constructor(title, text, text2) {
-        this.title = title;
-        this.text = text;
+        super(title, text);
         this.text2 = text2;
     }
     // function to turn this article instance into HTML
@@ -33,20 +31,21 @@ class DoubleParagraphArticle extends SingleParagraphArticle {
         
     }
 }
-*/
+
 // function that creates the article
 function createArticle (articleKind, title, content){
     article = new articleKind(title, content[0], content[1]);
     article.turnIntoHTML();
 }
 // creation of various articles
-createArticle(SingleParagraphArticle, "Article1", ["This is absolutely not a test."]);
-createArticle(SingleParagraphArticle, "Article2", ["This is absolutely not a test too."]);
-createArticle(SingleParagraphArticle, "Article3", ["This is absolutely not a test."]);
-createArticle(SingleParagraphArticle, "Article4", ["This is absolutely not a test too."]);
-//createArticle(DoubleParagraphArticle, "Article2", ["This is a nice article.", "Did I mention this one has 2 paragraphs?"]);
+createArticle(SingleParagraphArticle, "Kinds Of Wood", ["Hello! We sell many kinds of wood, read further for various kinds of wood."]);
+createArticle(SingleParagraphArticle, "Acacia", ["This is a very nice tree."]);
+createArticle(SingleParagraphArticle, "Alder", ["This is a very nice tree."]);
+createArticle(SingleParagraphArticle, "Ash", ["This is a very nice tree."]);
+createArticle(SingleParagraphArticle, "Bengi", ["This is a very nice tree."]);
+createArticle(DoubleParagraphArticle, "Article2", ["This is a nice article.", "Did I mention this one has 2 paragraphs?"]);
 
-// remove last link to next article (sorry, didn't have time to make some sort of checker in the HTML generator ;-(  )
+// remove last link to next article (sorry, we didn't have time to make some sort of checker in the HTML generator)
 links = $( "a" );
 linkslength = links.length;
 links[linkslength-1].remove("a");

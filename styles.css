@@ -109,5 +109,17 @@ ol li {
 }
 
 .kb-articles {
+    color: white;
+    background-color: rgba(20, 20, 20, 0.5);
     width: 500px;
+    margin: 10px;
+    padding: 50px;
+}
+
+.kb-articles h2 {
+    color: inherit;
+}
+
+.kb-articles p {
+    color: inherit;
 }
