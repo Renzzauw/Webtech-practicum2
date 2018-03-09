@@ -23,22 +23,26 @@ var options = {
         hoverable: true
     }
 }
-// plotting of the lines on the grid
 
-$.plot($("#placeholder"), data, options);
-
-// functionality for interaction with the plot
+dataSet = data;
 checkboxes = $("input");
-    if (inputs[0].checked && inputs[1].checked){
 
+function handleCheckBoxes() {
+    // get checkbox statusses
+    var toggled = [checkboxes[0].checked, checkboxes[1].checked];
+    if (toggled[0] && toggled[1]){
+        dataSet = data;
     }
-    else if (!inputs[0].checked && inputs[1].checked){
-
+    else if (!toggled[0] && toggled[1]){
+        dataSet = [data[1]];
     }
-    else if (inputs[0].checked && !inputs[1].checked){
-        
+    else if (toggled[0] && !toggled[1]){
+        dataSet = [data[0]];
     }
-
+    $.plot($("#placeholder"), dataSet, options);
+};
+checkboxes[0].click( handleCheckBoxes );
+checkboxes[1].click( handleCheckBoxes );
 
 
 
