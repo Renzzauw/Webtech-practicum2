@@ -76,17 +76,19 @@
             <h1>Knowledge Base</h1>
             <img id="home-image1" src="media/heart.jpg" alt="wood heart"><br>
         </header>   
-        <!-- main content page -->       
+        <!-- main content page --> 
+        <p id="modtext">Plz laat dit werken</p>      
         <button class="togglebutton" onclick="hey()">change style</button>
+
         <div id="contextMenu" class="context-menu">
             <ul id="menu">
-                <li class="ui-state-disabled"><div>Toys (n/a)</div></li>
+                <li><div>Toys (n/a)</div></li>
                 <li><div>Books</div></li>
                 <li><div>Clothing</div></li>
-                <li><div>Electronics</div>
+                <li><div>Change bold</div>
                     <ul>
-                    <li class="ui-state-disabled"><div>Home Entertainment</div></li>
-                    <li><div>Car Hifi</div></li>
+                    <li><div id="bold">Set text bold</div></li>
+                    <li><div id="unbold">Set text not bold</div></li>
                     <li><div>Utilities</div></li>
                     </ul>
                 </li>
@@ -117,8 +119,26 @@
             function hey(){
                 $("#contextMenu").toggle();
             }
+            function clicky(){
+                alert(clicked);
+            }
+            var setbold = document.getElementById('bold');
+            setbold.onclick = boldFunc;
+            var setunbold = document.getElementById('unbold');
+            setunbold.onclick = unboldFunc;
+
+
+            function boldFunc() {
+                document.getElementById('modtext').style.fontWeight = "bold";
+            }
+
+            function unboldFunc() {
+                document.getElementById('modtext').style.fontWeight = "normal";
+            }
+
         </script>
         <!-- <script type="text/javascript" src="scripts/newcontextmenu.js"></script> -->
+
         <br>
         <br>
         <br>
