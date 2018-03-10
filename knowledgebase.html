@@ -9,25 +9,22 @@
         <link rel="stylesheet" href="styles.css"/>
         <script src="libraries/jquery.js"></script>
         <script src="libraries/jquery-ui.js"></script>
+        <script>
+            $( function() {
+              $( "#menu" ).menu();
+            } );
+        </script>
         <style type="text/css">
-            *{
-                margin: 0;
-                padding: 0;
-            }
-            
-            html, body, .container{
-                height: 100%;
-            }
 
-            body{
-                font-family: verdana;
-                font-size: 10px;
+            .ui-menu {
+                width: 150px;
             }
-            
+           
             .container{
                 background: #f6f6f6;
             }
             .context-menu{
+                background: white;
                 width: 200px;
                 height: auto;
                 box-shadow: 0 0 20px 0 #ccc;
@@ -55,6 +52,11 @@
                 margin: 2px 0px 2px 0px;
 
             }
+
+            .togglebutton{
+                width: 120px;
+                height: 60px;
+            }
         </style>
     </head>
     <!-- body -->
@@ -75,28 +77,69 @@
             <img id="home-image1" src="media/heart.jpg" alt="wood heart"><br>
         </header>   
         <!-- main content page -->       
-        
-        <div class = "container" oncontextmenu="return hey();"></div>
-            <div id="contextMenu" class="context-menu">
-                <ul>
-                    <li>Optie 1</li>
-                    <li>Optie 2</li>
-                    <li class="separator"></li>
-                    <li>Optie 94</li>
-                </ul>
-            </div>
+        <button class="togglebutton" onclick="hey()">change style</button>
+        <div id="contextMenu" class="context-menu">
+            <ul id="menu">
+                <li class="ui-state-disabled"><div>Toys (n/a)</div></li>
+                <li><div>Books</div></li>
+                <li><div>Clothing</div></li>
+                <li><div>Electronics</div>
+                    <ul>
+                    <li class="ui-state-disabled"><div>Home Entertainment</div></li>
+                    <li><div>Car Hifi</div></li>
+                    <li><div>Utilities</div></li>
+                    </ul>
+                </li>
+                <li><div>Movies</div></li>
+                <li><div>Music</div>
+                    <ul>
+                    <li><div>Rock</div>
+                        <ul>
+                        <li><div>Alternative</div></li>
+                        <li><div>Classic</div></li>
+                        </ul>
+                    </li>
+                    <li><div>Jazz</div>
+                        <ul>
+                        <li><div>Freejazz</div></li>
+                        <li><div>Big Band</div></li>
+                        <li><div>Modern</div></li>
+                        </ul>
+                    </li>
+                    <li><div>Pop</div></li>
+                    </ul>
+                </li>
+                <li class="ui-state-disabled"><div>Specials (n/a)</div></li>
+            </ul>
+        </div>
         <script type="text/javascript">
-
             var contextMenu = document.getElementById('contextMenu');
-            function hey(event){
-                contextMenu.style.display = 'block';
-                contextMenu.style.left = event.clientX + 'px';
-                contextMenu.style.top = event.clientY + 'px';
-                return false;
+            function hey(){
+                $("#contextMenu").toggle();
             }
         </script>
         <!-- <script type="text/javascript" src="scripts/newcontextmenu.js"></script> -->
-        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <!-- footer -->
         <footer>
             <p id="footer-text">Copyright © Woodstocky 2018</p>
