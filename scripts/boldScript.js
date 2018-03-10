@@ -20,6 +20,8 @@ var setgreen = document.getElementById('green');
 setgreen.onclick = greenFunc;
 var setblue = document.getElementById('blue');
 setblue.onclick = blueFunc;
+var setblack = document.getElementById('black');
+setblack.onclick = blackFunc;
 
 function boldFunc() {
     document.getElementById('modtext').style.fontWeight = "bold";
@@ -39,4 +41,8 @@ function greenFunc(){
 
 function blueFunc(){
     document.getElementById('modtext').style.color = "blue";
+}
+
+function blackFunc(){
+    document.getElementById('modtext').style.color = "black";
 }
