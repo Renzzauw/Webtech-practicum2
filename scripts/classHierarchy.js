@@ -9,13 +9,13 @@ class SingleParagraphArticle {
     constructor(title, text) {
         this.title = title;
         this.text = text;   
-        articlecounter++;
+        articleCounter++;
     }
     // function to turn this article instance into HTML
     turnIntoHTML() {
         $( "main" ).append('<article class="kb-articles" id="art-'+articleCounter+'"><h2>'+this.title+'</h2><p>'+this.text+'</p><p><a href="#art-'+(articleCounter+1)+'">Next Article</a></p></article>');
         // add this article to the nav menu on top
-        $( "#nav-menu-kb" ).append('<a href="#art-'+artiClecounter+'">'+this.title+'</a>');        
+        $( "#nav-menu-kb" ).append('<a href="#art-'+articleCounter+'">'+this.title+'</a>');        
     }
 }
 
@@ -27,9 +27,9 @@ class DoubleParagraphArticle extends SingleParagraphArticle {
     }
     // function to turn this article instance into HTML
     turnIntoHTML() {
-        $( "main" ).append('<article class="kb-articles" id="art-'+artiClecounter+'"><h2>'+this.title+'</h2><p>'+this.text+'</p><p>'+this.text2+'</p><p><a href="#art-'+(articlecounter+1)+'">Next Article</a></p></article>');
+        $( "main" ).append('<article class="kb-articles" id="art-'+articleCounter+'"><h2>'+this.title+'</h2><p>'+this.text+'</p><p>'+this.text2+'</p><p><a href="#art-'+(articleCounter+1)+'">Next Article</a></p></article>');
         // add this article to the nav menu on top
-        $( "#nav-menu-kb" ).append('<a href="#art-'+artiClecounter+'">'+this.title+'</a>'); 
+        $( "#nav-menu-kb" ).append('<a href="#art-'+articleCounter+'">'+this.title+'</a>'); 
     }
 }
 
