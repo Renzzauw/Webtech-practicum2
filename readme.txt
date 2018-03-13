@@ -22,4 +22,5 @@ Tasks / Features:
     We have a plot page with two lines on a grid. There are two checkboxes for each line that toggle the line on or off. Using eventlisteners,
     these lines will either be drawn or not. This way the graph is interactive.
 -   JQUERY UI ELEMENT:
-    
+    On the knowledge base page we have added a Jquery UI context menu. This menu is activated when you press the button.
+    With this dropdown menu you can manipulate the css of the article paragraphs.
