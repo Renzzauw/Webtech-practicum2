@@ -13,7 +13,7 @@ class SingleParagraphArticle {
     }
     // function to turn this article instance into HTML
     turnIntoHTML() {
-        $( "main" ).append('<article class="kb-articles" id="art-'+articleCounter+'"><h2>'+this.title+'</h2><p>'+this.text+'</p><p><a href="#art-'+(articleCounter+1)+'">Next Article</a></p></article>');
+        $( "main" ).append('<article class="1p-articles kb-articles" id="art-'+articleCounter+'"><h2>'+this.title+'</h2><p>'+this.text+'</p><p><a href="#art-'+(articleCounter+1)+'">Next Article</a></p></article>');
         // add this article to the nav menu on top
         $( "#nav-menu-kb" ).append('<a href="#art-'+articleCounter+'">'+this.title+'</a>');        
     }
@@ -27,7 +27,7 @@ class DoubleParagraphArticle extends SingleParagraphArticle {
     }
     // function to turn this article instance into HTML
     turnIntoHTML() {
-        $( "main" ).append('<article class="kb-articles" id="art-'+articleCounter+'"><h2>'+this.title+'</h2><p>'+this.text+'</p><p>'+this.text2+'</p><p><a href="#art-'+(articleCounter+1)+'">Next Article</a></p></article>');
+        $( "main" ).append('<article class="2p-articles kb-articles" id="art-'+articleCounter+'"><h2>'+this.title+'</h2><p>'+this.text+'</p><p>'+this.text2+'</p><p><a href="#art-'+(articleCounter+1)+'">Next Article</a></p></article>');
         // add this article to the nav menu on top
         $( "#nav-menu-kb" ).append('<a href="#art-'+articleCounter+'">'+this.title+'</a>'); 
     }
@@ -41,7 +41,7 @@ class TripleParagraphArticle extends DoubleParagraphArticle {
     }
     // function to turn this article instance into HTML
     turnIntoHTML() {
-        $( "main" ).append('<article class="kb-articles" id="art-'+articleCounter+'"><h2>'+this.title+'</h2><p>'+this.text+'</p><p>'+this.text2+'</p><p>'+this.text3+'</p><p><a href="#art-'+(articleCounter+1)+'">Next Article</a></p></article>');
+        $( "main" ).append('<article class="3p-articles kb-articles" id="art-'+articleCounter+'"><h2>'+this.title+'</h2><p>'+this.text+'</p><p>'+this.text2+'</p><p>'+this.text3+'</p><p><a href="#art-'+(articleCounter+1)+'">Next Article</a></p></article>');
         // add this article to the nav menu on top
         $( "#nav-menu-kb" ).append('<a href="#art-'+articleCounter+'">'+this.title+'</a>'); 
     }
