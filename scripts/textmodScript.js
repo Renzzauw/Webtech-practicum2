@@ -4,7 +4,7 @@ function hey(){
     $("#contextMenu").toggle();
 }
 
-$('#bold').on('click', function(){$('#modtext').css({'font-weight':'bold'})});
+$('#bold').on('click', function(){if ($("p").hasClass('kb-text')) {$("p").css({'font-weight':'bold'})}});
 $('#unbold').on('click', function(){$('#modtext').css({'font-weight':'normal'})});
 
 $('#red').on('click', function(){$('#modtext').css({'color':'red'})});
