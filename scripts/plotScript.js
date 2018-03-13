@@ -24,11 +24,9 @@ var options = {
     }
 }
 
-dataSet = data;
-checkboxes = $("input");
-
+// function for displaying the right lines for each selected checkbox
 function handleCheckBoxes() {
-    // get checkbox statusses
+    // get checkbox statusses and set the proper graph data for the checked checkboxes
     var toggled = [checkboxes[0].checked, checkboxes[1].checked];
     if (toggled[0] && toggled[1]){
         dataSet = data;
@@ -39,61 +37,20 @@ function handleCheckBoxes() {
     else if (toggled[0] && !toggled[1]){
         dataSet = [data[0]];
     }
+    else {
+        dataSet = [];
+    }
+    // update and draw the plot
     $.plot($("#placeholder"), dataSet, options);
 };
-checkboxes[0].click( handleCheckBoxes );
-checkboxes[1].click( handleCheckBoxes );
 
+// copy data sets and get the checkbox elements
+dataSet = data;
+checkboxes = $("input");
 
+// initial drawing of the lines
+$.plot($("#placeholder"), dataSet, options);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-// plot options
-var options = {
-    bars: {
-        show: true,
-        barWidth: 0.6,
-    }, 
-    xaxis: {
-        mode: "categories",
-        tickLength: 0
-    }
-}
-*/
-/*
-$(function() {
-
-// line data
-
-// plotting the lines
-$.plot("#placeholder", data, {
-    series: {
-        bars: {
-            show: true,
-            barWidth: 0.6,
-            align: "center"
-        }
-    },
-    xaxis: {
-        mode: "categories",
-        tickLength: 0
-    }
-});
-
-
-});
-*/
+// adding event listeners to the checkboxes
+checkboxes[0].addEventListener("click", handleCheckBoxes);
+checkboxes[1].addEventListener("click", handleCheckBoxes);
