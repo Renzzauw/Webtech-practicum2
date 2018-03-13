@@ -15,12 +15,11 @@ Tasks / Features:
 -   CLASSES, INHERITANCE & KNOWLEDGE BASE:
     We made an article generating class. This class takes a title and content in its constructor and creates HTML with this info.
     It also makes sure to link it with an <a>-tag to next articles and adds the article to a nav menu on top. We made a second class
-    that inherits from this one, but it adds an extra feature: an extra paragraph of content.
+    that inherits from this one, but it adds an extra feature: an extra paragraph of content. We also have a third class, which creates 
+    an article with three paragraphs. This class extends the previous class. Our knowledge base is entirely build on DOM manipulation.
+    all the articles' elements are generated with javascript.
+-   PLOT:
+    We have a plot page with two lines on a grid. There are two checkboxes for each line that toggle the line on or off. Using eventlisteners,
+    these lines will either be drawn or not. This way the graph is interactive.
+-   JQUERY UI ELEMENT:
     
-    
-    
-    
-    
-    
-    TODO:
--   The plot page has a plotted  line that has been made with he Flot library. TODO: interactive maken.
