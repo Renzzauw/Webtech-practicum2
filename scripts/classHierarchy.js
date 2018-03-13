@@ -56,11 +56,17 @@ function createArticle (articleKind, title, content){
 // creation of various articles
 createArticle(SingleParagraphArticle, "Kinds Of Wood", ["Hello! We sell many kinds of wood, read further for various kinds of wood."]);
 createArticle(SingleParagraphArticle, "Acacia", ["This is a very nice tree."]);
-createArticle(TripleParagraphArticle, "Article with 3 P's", ["This is a nice article.", "Did I mention this one has 3 paragraphs?", "Look, here's the 3th one!"]);
 createArticle(SingleParagraphArticle, "Alder", ["This is a very nice tree."]);
 createArticle(SingleParagraphArticle, "Ash", ["This is a very nice tree."]);
-createArticle(SingleParagraphArticle, "Bengi", ["This is a very nice tree."]);
-createArticle(DoubleParagraphArticle, "Article2", ["This is a nice article.", "Did I mention this one has 2 paragraphs?"]);
+createArticle(SingleParagraphArticle, "Bengi", ["This is a very nice tree. (All our trees are nice in case you did not notice!)"]);
+createArticle(TripleParagraphArticle, "Staff", ["Enough about our trees!", "We also have a really friendly and helpful team.", "Let us introduce you to some!"]);
+createArticle(DoubleParagraphArticle, "Hans Janssen", ["Boss", "This is our amazing boss."]);
+createArticle(DoubleParagraphArticle, "Henk Poarlski", ["Staff Member", "We are still not sure how to pronounce his name..."]);
+createArticle(DoubleParagraphArticle, "Harold de Boer", ["Servicedesk Manager", "The guy that picks up our phone and loves to listen to you ranting about our wood breaking down so fast!"]);
+createArticle(DoubleParagraphArticle, "Tips & Tricks", ["As a DIY wood hobbyist, you NEED some of these tips.", "Make sure to follow these very carefully."]);
+createArticle(SingleParagraphArticle, "Tip 1", ["Don't cut your fingers off."]);
+createArticle(SingleParagraphArticle, "Tip 2", ["Use our top quality wood."]);
+createArticle(SingleParagraphArticle, "Tip 3", ["Always have fun!"]);
 
 // remove last link to next article (sorry, we didn't have time to make some sort of checker in the HTML generator)
 links = $( "a" );
