@@ -1,3 +1,0 @@
-function hey() {
-  $( "#newmenu" ).menu();
-}
