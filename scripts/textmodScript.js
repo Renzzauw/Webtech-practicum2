@@ -4,13 +4,13 @@ function hey(){
     $("#contextMenu").toggle();
 }
 
-$('#bold').on('click', function(){if ($("p").hasClass('kb-text')) {$("p").css({'font-weight':'bold'})}});
-$('#unbold').on('click', function(){$('#modtext').css({'font-weight':'normal'})});
+$('#bold').on('click', function(){$(".kb-text").css({'font-weight':'bold'})});
+$('#unbold').on('click', function(){$(".kb-text").css({'font-weight':'normal'})});
 
-$('#red').on('click', function(){$('#modtext').css({'color':'red'})});
-$('#green').on('click', function(){$('#modtext').css({'color':'green'})});
-$('#blue').on('click', function(){$('#modtext').css({'color':'blue'})});
-$('#black').on('click', function(){$('#modtext').css({'color':'black'})});
+$('#red').on('click', function(){$(".kb-text").css({'color':'red'})});
+$('#green').on('click', function(){$(".kb-text").css({'color':'green'})});
+$('#blue').on('click', function(){$(".kb-text").css({'color':'blue'})});
+$('#black').on('click', function(){$(".kb-text").css({'color':'black'})});
 
-$('#italic').on('click', function(){$('#modtext').css({'font-style':'italic'})});
-$('#default').on('click', function(){$('#modtext').css({'font-style':'normal'})});
+$('#italic').on('click', function(){$(".kb-text").css({'font-style':'italic'})});
+$('#default').on('click', function(){$(".kb-text").css({'font-style':'normal'})});
