@@ -4,10 +4,6 @@ function hey(){
     $("#contextMenu").toggle();
 }
 
-function clicky(){
-    alert(clicked);
-}
-
 var setbold = document.getElementById('bold');
 setbold.onclick = boldFunc;
 var setunbold = document.getElementById('unbold');
