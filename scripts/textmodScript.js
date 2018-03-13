@@ -1,6 +1,6 @@
 var contextMenu = document.getElementById('contextMenu');
 
-function hey(){
+function toggleButton(){
     $("#contextMenu").toggle();
 }
 
